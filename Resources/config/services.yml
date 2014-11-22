@@ -1,0 +1,37 @@
+parameters:
+    bangpound_finite.state.class: Finite\State\State
+    bangpound_finite.transition.class: Finite\Transition\Transition
+    bangpound_finite.container_loader.class: Bangpound\Bundle\FiniteBundle\Loader\ContainerLoader
+    bangpound_finite.callback_handler.class: Finite\Event\CallbackHandler
+
+    bangpound_finite.graph.class: Marltu\Visualisation\Graphviz
+    bangpound_finite.graph.config.class: Marltu\Visualisation\Configuration
+
+services:
+    bangpound_finite.container_loader:
+        class: %bangpound_finite.container_loader.class%
+        arguments: [ { }, @bangpound_finite.callback_handler ]
+        abstract: true
+
+    bangpound_finite.callback_handler:
+        class: %bangpound_finite.callback_handler.class%
+        arguments: [ @event_dispatcher ]
+        public: false
+
+    bangpound_finite.state:
+        class: %bangpound_finite.state.class%
+        scope: prototype
+        public: false
+
+    bangpound_finite.transition:
+        class: %bangpound_finite.transition.class%
+        scope: prototype
+        public: false
+
+    bangpound_finite.graph:
+        class: %bangpound_finite.graph.class%
+        arguments: [ @bangpound_finite.graph.config ]
+
+    bangpound_finite.graph.config:
+        class: %bangpound_finite.graph.config.class%
+        arguments: [ true, null ]
