@@ -1,0 +1,27 @@
+{
+    "name": "bangpound/finite-bundle",
+    "description": "Extension of yohang/finite where transitions are configureable services",
+    "require": {
+        "yohang/finite": "^1.0"
+    },
+    "suggest": {
+        "marltu/finite-graphviz": "Produce visual representations of graphs, states and transitions"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Doherty",
+            "email": "bjd@bangpound.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bangpound\\Bundle\\FiniteBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
