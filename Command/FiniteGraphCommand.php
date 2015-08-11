@@ -8,13 +8,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class FiniteGraphCommand
- * @package Bangpound\Bundle\FiniteBundle\Command
+ * Class FiniteGraphCommand.
  */
 class FiniteGraphCommand extends ContainerAwareCommand
 {
     /**
-     * {@inheritDocs}
+     * {@inheritdoc}
      */
     protected function configure()
     {
@@ -25,7 +24,7 @@ class FiniteGraphCommand extends ContainerAwareCommand
     }
 
     /**
-     * {@inheritDocs}
+     * {@inheritdoc}
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {

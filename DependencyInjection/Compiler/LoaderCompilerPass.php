@@ -44,9 +44,10 @@ class LoaderCompilerPass implements CompilerPassInterface
      * constructor arguments. The arguments are applied to original definition
      * and then it is cloned for use in the loader's constructor.
      *
-     * @param  ContainerBuilder $container
+     * @param ContainerBuilder $container
      * @param $configs
      * @param $transformer
+     *
      * @return array
      */
     private function buildArguments(ContainerBuilder $container, $configs, $transformer)

@@ -9,13 +9,13 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('bangpound_finite');
-        $rootProto   = $rootNode->useAttributeAsKey('name')->prototype('array')->children();
+        $rootNode = $treeBuilder->root('bangpound_finite');
+        $rootProto = $rootNode->useAttributeAsKey('name')->prototype('array')->children();
 
         $rootProto
             ->scalarNode('class')->isRequired()->end()

@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class BangpoundFiniteExtension extends Extension
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -39,7 +39,7 @@ class BangpoundFiniteExtension extends Extension
     }
 
     /**
-     * Remove callback entries where index 'disabled' is set to true
+     * Remove callback entries where index 'disabled' is set to true.
      *
      * @param array $config
      *

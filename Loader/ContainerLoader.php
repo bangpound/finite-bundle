@@ -27,18 +27,19 @@ class ContainerLoader implements LoaderInterface, ContainerAwareInterface
     {
         $this->config = array_merge(
             array(
-                'class'         => '',
-                'graph'         => 'default',
+                'class' => '',
+                'graph' => 'default',
                 'property_path' => 'finiteState',
-                'states'        => array(),
-                'transitions'   => array(),
+                'states' => array(),
+                'transitions' => array(),
             ),
             $config
         );
     }
 
     /**
-     * @{inheritDoc}
+     * {@inheritdoc}
+     *
      * @param StateMachineInterface $stateMachine
      */
     public function load(StateMachineInterface $stateMachine)
@@ -51,7 +52,7 @@ class ContainerLoader implements LoaderInterface, ContainerAwareInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function supports($object, $graph = 'default')
     {
@@ -61,7 +62,7 @@ class ContainerLoader implements LoaderInterface, ContainerAwareInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function setContainer(ContainerInterface $container = null)
     {
